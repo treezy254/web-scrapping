@@ -1,0 +1,11 @@
+TO avoid crawling the same page twice, it is extremely important taht all internal links discovered are formatted consistenly , and kept in a running set for easy lookups, while the program is running.
+
+Before you start writing a crawler that follows all outbounds links, you should ask yourself a few questions:
+
+1. What data am I trying to gather?
+
+2. When my crawler reaches a particular website, will it immediately folllow the next outbound link to a new website, or will it stick around for a while and drill down into the current website?
+
+3. Are there any conditions under which I would not want to scrape a particular site?
+
+4. How am I protecting myself against legal action if my web crawler catches the attention of a webmaster on one of the sites it runs across?
