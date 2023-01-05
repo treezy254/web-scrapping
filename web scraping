@@ -9,3 +9,53 @@ Before you start writing a crawler that follows all outbounds links, you should 
 3. Are there any conditions under which I would not want to scrape a particular site?
 
 4. How am I protecting myself against legal action if my web crawler catches the attention of a webmaster on one of the sites it runs across?
+
+
+Planning and Defining Objects
+--
+
+What do I need?
+
+Will this information help with the project goals? Will it be a roadblock if I dont have it, or is it just "nice to have" but won't ultimately impact anything?
+
+If it might help in the future, but I'm unsure, how difficult it will be to go back and collect the data at a later time?
+
+Is this data redundant to data I've already collected?
+
+Does it make logical sense to store the data within this particular object? 
+
+---
+
+Is this data sparse or dense? Will it be relevant and populated in every listing or just a handful out of the set?
+
+How large is the data?
+
+Especially in the case of large data, will I need to regualrly retrieve it every time I run my analysis, or only on accasion?
+
+How variable is this type of data? Will I regularly need to add new attributes, modify types, or is it  set in stone?
+
+---
+
+As you start to add scraper functions for additional new sites, ypou might notice a pattern forming. Every site's parsing function does essentially the same thing:
+
+- Selects the title element and extracts the text for the title
+- Selects the main content of the article
+- Selects other content items as needed
+- Return a COntent object instantiated with the strings found previously
+
+
+SCRAPY
+---
+
+Install
+Initialize a new spider
+Writing a simple scraper
+Spidering with rules
+Creating Items
+Outputting Items
+The Item Pipeline
+Logging with Scrapy
+
+
+Storing Data
+---
