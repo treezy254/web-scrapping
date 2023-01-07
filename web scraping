@@ -59,3 +59,22 @@ Logging with Scrapy
 
 Storing Data
 ---
+
+
+Bradth-first search
+--
+
+The mainfunction, searcgBreath, works recursively to construct a list of all possible paths from the search page and stops when it finds a path that has reached the target path:
+
+- It starts with a single path, [1], representing a path in which the user stays on the target page with the ID 1 and follows no links.
+
+- For eah path in the list of paths, it gets all of the links that link out from the page represented by the last page in the path.
+
+- For each of these outbound links, it checks wheteher tehy match the targetPageId. If there's a match, taht path is returned.
+
+- If tehre's no match, a new path is added to a new list of (now longer) paths, consisting of the old path + the new outbound page link.
+
+- If the targetPage Id is not found at this level at all, a recursion occurs and searchBreadth is called with the same targetPageId and new, longer, list of paths.
+
+
+After the list of page IDs containing a path between the two pages found, each ID is resolved to its actual URL and printed.
